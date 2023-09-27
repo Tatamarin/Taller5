@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Agregar Libro</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" 
+              integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+        <link th:href="@{/css/stylesFondo.css}" rel="stylesheet">   
+    </head>
+    <body>
+        <nav th:fragment="nav-bar" class="nav-bar navbar navbar-expand-lg">
+            <div class="nav-bar container-fluid">
+                <a class="nav-bar navbar-brand" th:href="@{/index}"><img src="/Imagenes/LogoPa.png" id="logoBiblo"
+                        alt="Logo" width="100" height="65" class=""><strong>PALABRAS ESCRITAS</strong></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                    <a class="btn btn-outline-dark" type="button" th:href="@{/libroView}"><strong>Libros</strong></a>
+                    <a class="btn btn-outline-dark" type="button" th:href="@{/}"><strong>Autores</strong></a>
+                    <a class="btn btn-outline-dark" type="button" th:href="@{/index}"><strong>Libro
+                            autoreados</strong></a>
+                </div>
+            </div>
+        </nav>
+
+        <div class="container">
+        </div>
+        <div class="container">
+            <h1>Registro de los libros</h1>
+        </div> 
+        <div class="container mt-5">
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-header">
+                            <h1 class="card-title">Formulario de Libro</h1>
+                        </div>
+                        <div class="card-body">
+                            <form th:action="@{/libros}" th:object="${libro}" method="post">
+                                <div class="mb-3">
+                                    <label for="ISBN" class="form-label">ISBN</label>
+                                    <input type="text" class="form-control" id="ISBN" name="ISBN" placeholder="digite su ISBN" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="nombreLibro" class="form-label">Nombre del libro</label>
+                                    <input type="text" class="form-control" id="nombreLibro" name="nombreLibro"  placeholder="digite el nombre del libro" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="precioPublico" class="form-label">Precio para el público</label>
+                                    <input type="number" class="form-control" id="precioPublico" name="precioPublico"  placeholder="digite el precio para el público" required>
+                                </div>                                
+                                <button type="submit" class="btn btn-primary">Guardar</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" 
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    </body>
+
+
+</html>
