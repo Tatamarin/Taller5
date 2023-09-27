@@ -1,6 +1,5 @@
 package com.taller5.demo.Entity;
 
-import java.util.List;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
