@@ -1,5 +1,12 @@
 package com.taller5.demo.Repository;
 
-public interface IAutor {
-    
+
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+import com.taller5.demo.Entity.Autor;
+
+@Repository
+public interface IAutor extends JpaRepository<Autor, Long> {   
 }

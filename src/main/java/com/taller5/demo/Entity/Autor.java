@@ -15,7 +15,7 @@ public class Autor {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
 
-    private Long autorId;
+    private Long Id;
 
     @Column(name = "nombre", length = 255, nullable = false)
     private String nombre;
@@ -24,19 +24,23 @@ public class Autor {
     private String ciudad;
     
     
-    public Autor(Long autorId, String nombre, String ciudad) {
-        this.autorId = autorId;
+     public Autor() {
+    
+    }
+
+    public Autor(Long Id, String nombre, String ciudad) {
+        this.Id = Id;
         this.nombre = nombre;
         this.ciudad = ciudad;
     }
 
   
     public Long getAutorId() {
-        return autorId;
+        return Id;
     }
 
-    public void setAutorId(Long autorId) {
-        this.autorId = autorId;
+    public void setAutorId(Long Id) {
+        this.Id = Id;
     }
 
     public String getNombre() {

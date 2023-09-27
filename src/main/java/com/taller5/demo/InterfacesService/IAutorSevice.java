@@ -8,8 +8,8 @@ import com.taller5.demo.Entity.Autor;
 public interface IAutorSevice {
     
     public List<Autor>listarAutor();
-    public Optional<Autor>listarAutorId(int Id);
-    public int saveC(Autor a);
-    public void deleteC (Autor Id);
+    public Optional<Autor>listarAutorId(Long Id);
+    public int saveAutor(Autor a);
+    public void deleteAutor (Long Id);
  
 }
